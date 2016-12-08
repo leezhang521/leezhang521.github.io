@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#以下是那些大牛整理过的前端工作中经常使用到的正则表达式"><span class="post-toc-number">1.</span> <span class="post-toc-text">以下是那些大牛整理过的前端工作中经常使用到的正则表达式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab1-校验密码强度"><span class="post-toc-number">2.</span> <span class="post-toc-text">tab1) 校验密码强度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab2-校验中文"><span class="post-toc-number">3.</span> <span class="post-toc-text">tab2) 校验中文</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab3-由数字、26个英文字母或下划线组成的字符串"><span class="post-toc-number">4.</span> <span class="post-toc-text">tab3) 由数字、26个英文字母或下划线组成的字符串</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab4-校验E-Mail-地址"><span class="post-toc-number">5.</span> <span class="post-toc-text">tab4) 校验E-Mail 地址</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab5-校验身份证号码"><span class="post-toc-number">6.</span> <span class="post-toc-text">tab5) 校验身份证号码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab6-校验日期"><span class="post-toc-number">7.</span> <span class="post-toc-text">tab6)  校验日期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab7-校验金额"><span class="post-toc-number">8.</span> <span class="post-toc-text">tab7) 校验金额</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab8-校验手机号"><span class="post-toc-number">9.</span> <span class="post-toc-text">tab8)  校验手机号</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab2-判断IE的版本"><span class="post-toc-number">10.</span> <span class="post-toc-text">tab2) 判断IE的版本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#tab10-校验IP-v4地址"><span class="post-toc-number">11.</span> <span class="post-toc-text">tab10)  校验IP-v4地址</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -330,7 +330,59 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		
+		<h4 id="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"><a href="#以下是那些大牛整理过的前端工作中经常使用到的正则表达式" class="headerlink" title="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"></a>以下是那些大牛整理过的前端工作中经常使用到的正则表达式</h4><hr>
+<h4 id="tab1-校验密码强度"><a href="#tab1-校验密码强度" class="headerlink" title="tab1) 校验密码强度"></a>tab1) 校验密码强度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</div><div class="line"></div><div class="line">	^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$</div></pre></td></tr></table></figure>
+<h4 id="tab2-校验中文"><a href="#tab2-校验中文" class="headerlink" title="tab2) 校验中文"></a>tab2) 校验中文</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">字符串仅能是中文。</div><div class="line"></div><div class="line">	^[\\u4e00-\\u9fa5]&#123;0,&#125;$</div></pre></td></tr></table></figure>
+<h4 id="tab3-由数字、26个英文字母或下划线组成的字符串"><a href="#tab3-由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="tab3) 由数字、26个英文字母或下划线组成的字符串"></a>tab3) 由数字、26个英文字母或下划线组成的字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\w+$</div></pre></td></tr></table></figure>
+<h4 id="tab4-校验E-Mail-地址"><a href="#tab4-校验E-Mail-地址" class="headerlink" title="tab4) 校验E-Mail 地址"></a>tab4) 校验E-Mail 地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">同密码一样，下面是E-mail地址合规性的正则检查语句。</div><div class="line"></div><div class="line">[\\w!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+(?:\\.[\\w!#$%&amp;&apos;*+/=?^_`&#123;|&#125;~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?</div></pre></td></tr></table></figure>
+<h4 id="tab5-校验身份证号码"><a href="#tab5-校验身份证号码" class="headerlink" title="tab5) 校验身份证号码"></a>tab5) 校验身份证号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">下面是身份证号码的正则校验。15 或 18位。</div><div class="line"></div><div class="line">15位：</div><div class="line"></div><div class="line">^[1-9]\\d&#123;7&#125;((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d&#123;3&#125;$</div><div class="line">18位：</div><div class="line"></div><div class="line">^[1-9]\\d&#123;5&#125;[1-9]\\d&#123;3&#125;((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d&#123;3&#125;([0-9]|X)$</div></pre></td></tr></table></figure>
+<h4 id="tab6-校验日期"><a href="#tab6-校验日期" class="headerlink" title="tab6)  校验日期"></a>tab6)  校验日期</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。</div><div class="line"></div><div class="line">^(?:(?!0000)[0-9]&#123;4&#125;-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]&#123;2&#125;(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$</div></pre></td></tr></table></figure>
+<h4 id="tab7-校验金额"><a href="#tab7-校验金额" class="headerlink" title="tab7) 校验金额"></a>tab7) 校验金额</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">金额校验，精确到2位小数。</div><div class="line"></div><div class="line">^[0-9]+(.[0-9]&#123;2&#125;)?$</div></pre></td></tr></table></figure>
+<h4 id="tab8-校验手机号"><a href="#tab8-校验手机号" class="headerlink" title="tab8)  校验手机号"></a>tab8)  校验手机号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）</div><div class="line"></div><div class="line">^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d&#123;8&#125;$</div></pre></td></tr></table></figure>
+<h4 id="tab2-判断IE的版本"><a href="#tab2-判断IE的版本" class="headerlink" title="tab2) 判断IE的版本"></a>tab2) 判断IE的版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。</div><div class="line"></div><div class="line">^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$</div></pre></td></tr></table></figure>
+<h4 id="tab10-校验IP-v4地址"><a href="#tab10-校验IP-v4地址" class="headerlink" title="tab10)  校验IP-v4地址"></a>tab10)  校验IP-v4地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">IP4 正则语句。</div><div class="line"></div><div class="line">\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b</div></pre></td></tr></table></figure>
+<ol>
+<li>校验IP-v6地址<br>IP6 正则语句。</li>
+</ol>
+<p>(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))</p>
+<ol>
+<li>检查URL的前缀<br>应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。</li>
+</ol>
+<p>if (!s.match(/^[a-zA-Z]+:\/\//))<br>{<br>    s = ‘http://‘ + s;<br>}</p>
+<ol>
+<li>提取URL链接<br>下面的这个表达式可以筛选出一段文本中的URL。</li>
+</ol>
+<p>^(f|ht){1}(tp|tps):\/\/([\w-]+\.)+[\w-]+(\/[\w- ./?%&amp;=]*)?</p>
+<ol>
+<li>文件路径及扩展名校验<br>验证windows下文件路径和扩展名（下面的例子中为.txt文件）</li>
+</ol>
+<p>^([a-zA-Z]\:|\\)\\([^\\]+\\)<em>[^\/:</em>?”&lt;&gt;|]+\.txt(l)?$</p>
+<ol>
+<li>提取Color Hex Codes<br>有时需要抽取网页中的颜色代码，可以使用下面的表达式。</li>
+</ol>
+<p>^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$</p>
+<ol>
+<li>提取网页图片<br>假若你想提取网页中所有图片信息，可以利用下面的表达式。</li>
+</ol>
+<p>\&lt; <em>[img][^\\&gt;]</em>[src] <em>= </em>[\“\‘]{0,1}([^\“\‘\ &gt;]*)</p>
+<ol>
+<li>提取页面超链接<br>提取html中的超链接。</li>
+</ol>
+<p>(<a\\s*(?!.*\\brel=)[^>]<em>)(href=”https?:\/\/)((?!(?:(?:www\.)?’.implode(‘|(?:www\.)?’, $follow_list).’))[^”]+)”((?!.</em>\brel=)[^&gt;]<em>)(?:[^&gt;]</em>)&gt;</a\\s*(?!.*\\brel=)[^></p>
+<ol>
+<li>查找CSS属性<br>通过下面的表达式，可以搜索到相匹配的CSS属性。</li>
+</ol>
+<p>^\s<em>[a-zA-Z\-]+\s</em>[:]{1}\s[a-zA-Z0-9\s.#]+[;]{1}</p>
+<ol>
+<li>抽取注释<br>如果你需要移除HMTL中的注释，可以使用如下的表达式。</li>
+</ol>
+<!--(.*?)-->
+<ol>
+<li>匹配HTML标签<br>通过下面的表达式可以匹配出HTML中的标签属性。</li>
+</ol>
+<p>&lt;\/?\w+((\s+\w+(\s<em>=\s</em>(?:”.<em>?”|’.</em>?’|[\^’”&gt;\s]+))?)+\s<em>|\s</em>)\/?&gt;</p>
+<p>文／技匠（简书签约作者）<br>原文链接：<a href="http://www.jianshu.com/p/e7bb97218946" target="_blank" rel="external">http://www.jianshu.com/p/e7bb97218946</a><br>著作权归作者所有，转载请联系作者获得授权，并标注“简书签约作者”。</p>
+
 	
 	
 	
