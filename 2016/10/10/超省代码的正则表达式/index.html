@@ -330,7 +330,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h4 id="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"><a href="#以下是那些大牛整理过的前端工作中经常使用到的正则表达式" class="headerlink" title="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"></a>以下是那些大牛整理过的前端工作中经常使用到的正则表达式</h4><hr>
+		<p><img src="http://img.dnbcw.info/2012916/4242150.png" alt="正则"></p>
+<h4 id="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"><a href="#以下是那些大牛整理过的前端工作中经常使用到的正则表达式" class="headerlink" title="以下是那些大牛整理过的前端工作中经常使用到的正则表达式"></a>以下是那些大牛整理过的前端工作中经常使用到的正则表达式</h4><hr>
 <h4 id="tab1-校验密码强度"><a href="#tab1-校验密码强度" class="headerlink" title="tab1) 校验密码强度"></a>tab1) 校验密码强度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</div><div class="line"></div><div class="line">	^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$</div></pre></td></tr></table></figure>
 <h4 id="tab2-校验中文"><a href="#tab2-校验中文" class="headerlink" title="tab2) 校验中文"></a>tab2) 校验中文</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">字符串仅能是中文。</div><div class="line"></div><div class="line">	^[\\u4e00-\\u9fa5]&#123;0,&#125;$</div></pre></td></tr></table></figure>
 <h4 id="tab3-由数字、26个英文字母或下划线组成的字符串"><a href="#tab3-由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="tab3) 由数字、26个英文字母或下划线组成的字符串"></a>tab3) 由数字、26个英文字母或下划线组成的字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">^\\w+$</div></pre></td></tr></table></figure>
