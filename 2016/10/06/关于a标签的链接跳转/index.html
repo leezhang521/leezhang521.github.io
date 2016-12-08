@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        gulp框架的使用基础 | I want to fly in the sky
+        关于a标签的链接跳转 | I want to fly in the sky
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="gulp框架的使用基础 | I want to fly in the sky">
+    <meta property="og:title" content="关于a标签的链接跳转 | I want to fly in the sky">
     <meta property="og:description" content="null">
     
      <!--[if lte IE 9]>
@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#a标签的javascript：void-0"><span class="post-toc-number">1.</span> <span class="post-toc-text">a标签的javascript：void(0)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一"><span class="post-toc-number">2.</span> <span class="post-toc-text">(一)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决的办法有如下几种"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">解决的办法有如下几种</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一些小建议"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">一些小建议</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-建议少写javascript：void-0"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">1.建议少写javascript：void(0);</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-链接（href）直接使用javascript：void-0-在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“-”。为防止点击链接后跳转到页首，onclick事件return-false即可。"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">2.链接（href）直接使用javascript：void(0)在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“####”。为防止点击链接后跳转到页首，onclick事件return false即可。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-若只是显示鼠标移过，变成手形，可以使用样式-lt-span-style-quot-cursor-pointer-quot-onclick-quot-foo-quot-gt-Click-Me-lt-span-gt"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">3.若只是显示鼠标移过，变成手形，可以使用样式<span style="cursor:pointer" onclick="foo()">Click Me!</span></span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注释："><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注释：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">1.在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression-是一个要计算的-Javascript-标准的表达式。"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression 是一个要计算的 Javascript 标准的表达式。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#另外页面会自动调回顶端，是因为”-”默认的瞄点位置是top，所以会出现这种情况。"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">另外页面会自动调回顶端，是因为”#”默认的瞄点位置是top，所以会出现这种情况。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表达式会被计算但是不会在当前文档处装入任何内容，void-0-计算为0，但在JavaScript上没有任何效果，也就是说-lt-a-href-quot-javascript：void-0-quot-gt-的效果同-lt-a-href-quot-javascript：void-1-quot-gt-的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">表达式会被计算但是不会在当前文档处装入任何内容，void(0)计算为0，但在JavaScript上没有任何效果，也就是说 <a href="javascript：void(0)">的效果同<a href="javascript：void(1)">的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在这里举个例子"><span class="post-toc-number">2.6.1.</span> <span class="post-toc-text">在这里举个例子</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#区别"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-a-href-与-a-href-javascript-void-0-的区别"><span class="post-toc-number">2.7.1.</span> <span class="post-toc-text">1.a href=#与 a href=javascript:void(0) 的区别</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#（二）"><span class="post-toc-number">3.</span> <span class="post-toc-text">（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-可采用的链接办法如下"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1.可采用的链接办法如下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（三）总结"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">（三）总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-针对”-”-出现调到顶部的情况"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">1.针对”#”,出现调到顶部的情况</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-要执行某些处理，但是不整体刷新页面的情况下，可以使用void-0-那什么情况下用void-0-比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void-0-，所以在使用void-0-之前-最好先想一想-这个页面是否需要整体刷新。"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">2.要执行某些处理，但是不整体刷新页面的情况下，可以使用void(0),那什么情况下用void(0)比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void(0)，所以在使用void(0)之前,最好先想一想,这个页面是否需要整体刷新。</span></a></li></ol></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            gulp框架的使用基础
+            关于a标签的链接跳转
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>lixuebing</strong>
-        <span>8月 20, 2016</span>
+        <span>10月 06, 2016</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -304,21 +304,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=gulp框架的使用基础&url=http://yoursite.com//2016/08/20/gulp框架的使用基础/index.html&via=lixuebing" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于a标签的链接跳转&url=http://yoursite.com//2016/10/06/关于a标签的链接跳转/index.html&via=lixuebing" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/20/gulp框架的使用基础/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/10/06/关于a标签的链接跳转/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=gulp框架的使用基础&url=http://yoursite.com//2016/08/20/gulp框架的使用基础/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于a标签的链接跳转&url=http://yoursite.com//2016/10/06/关于a标签的链接跳转/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -330,7 +330,45 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		
+		<h2 id="a标签的javascript：void-0"><a href="#a标签的javascript：void-0" class="headerlink" title="a标签的javascript：void(0)"></a>a标签的javascript：void(0)</h2><h2 id="一"><a href="#一" class="headerlink" title="(一)"></a>(一)</h2><p><em>在写页面的时候，点击链接，有两种情况，一种是跳转到另一个页面，一种是只有点击链接效果而没有产生跳转到另一个页面的效果。当我们给a标签设置属性href=”#”的时候，点击链接后会回到页面顶部，没有很好的用户体验</em></p>
+<h3 id="解决的办法有如下几种"><a href="#解决的办法有如下几种" class="headerlink" title="解决的办法有如下几种"></a>解决的办法有如下几种</h3><ul>
+<li><p>点击链接后不出现任何效果</p>
+<p>  <code>&lt;a href=&quot;javascript：void(0);&quot; &gt;test&lt;/a&gt; 
+  &lt;a href=&quot;javascript：;&quot; &gt;test&lt;/a&gt; 
+  &lt;a href=&quot;####&quot; &gt;test&lt;/a&gt; //使用2个到4个#，见的大多是&quot;####&quot;，也有使用&quot;#all&quot;等</code></p>
+</li>
+</ul>
+<ul>
+<li><p>点击链接后，响应用户自定义的点击事件</p>
+<p>  <code>&lt;a href=&quot;javascript：void(0)&quot; onclick=&quot;doSomething()&quot;&gt;test&lt;/a&gt; 
+  &lt;a href=&quot;#&quot; onclick=&quot;doSomething();return false;&quot;&gt;什么问题都解决了,包括浏览器不兼容问题&lt;/    a&gt; //或者直接使用href=&quot;&quot; 
+  &lt;a href=&quot;#&quot; onclick=&quot;alert();event.returnValue=false;&quot;&gt;test&lt;/a&gt;</code></p>
+</li>
+</ul>
+<h3 id="一些小建议"><a href="#一些小建议" class="headerlink" title="一些小建议"></a>一些小建议</h3><h4 id="1-建议少写javascript：void-0"><a href="#1-建议少写javascript：void-0" class="headerlink" title="1.建议少写javascript：void(0);"></a><code>1.建议少写javascript：void(0);</code></h4><h4 id="2-链接（href）直接使用javascript：void-0-在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“-”。为防止点击链接后跳转到页首，onclick事件return-false即可。"><a href="#2-链接（href）直接使用javascript：void-0-在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“-”。为防止点击链接后跳转到页首，onclick事件return-false即可。" class="headerlink" title="2.链接（href）直接使用javascript：void(0)在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“####”。为防止点击链接后跳转到页首，onclick事件return false即可。"></a><code>2.链接（href）直接使用javascript：void(0)在IE中可能会引起一些问题，比如：造成gif动画停止播放等，所以，最安全的办法还是使用“####”。为防止点击链接后跳转到页首，onclick事件return false即可。</code></h4><h4 id="3-若只是显示鼠标移过，变成手形，可以使用样式-lt-span-style-quot-cursor-pointer-quot-onclick-quot-foo-quot-gt-Click-Me-lt-span-gt"><a href="#3-若只是显示鼠标移过，变成手形，可以使用样式-lt-span-style-quot-cursor-pointer-quot-onclick-quot-foo-quot-gt-Click-Me-lt-span-gt" class="headerlink" title="3.若只是显示鼠标移过，变成手形，可以使用样式&lt;span style=&quot;cursor:pointer&quot; onclick=&quot;foo()&quot;&gt;Click Me!&lt;/span&gt;"></a><code>3.若只是显示鼠标移过，变成手形，可以使用样式&lt;span style=&quot;cursor:pointer&quot; onclick=&quot;foo()&quot;&gt;Click Me!&lt;/span&gt;</code></h4><h3 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h3><h4 id="1-在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是"><a href="#1-在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是" class="headerlink" title="1.在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是"></a>1.在这里的void是javascript的操作符，表示只执行表达式，但没有返回值，而void的操作符用法格式是</h4><blockquote>
+<p><code>javascript：void (expression)</code><br><code>javascript：void expression</code> </p>
+</blockquote>
+<h3 id="在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression-是一个要计算的-Javascript-标准的表达式。"><a href="#在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression-是一个要计算的-Javascript-标准的表达式。" class="headerlink" title="在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression 是一个要计算的 Javascript 标准的表达式。"></a>在这里void是javascipt自身的操作符，它表示的是只执行表达式，但没有返回值！expression 是一个要计算的 Javascript 标准的表达式。</h3><h3 id="另外页面会自动调回顶端，是因为”-”默认的瞄点位置是top，所以会出现这种情况。"><a href="#另外页面会自动调回顶端，是因为”-”默认的瞄点位置是top，所以会出现这种情况。" class="headerlink" title="另外页面会自动调回顶端，是因为”#”默认的瞄点位置是top，所以会出现这种情况。"></a>另外页面会自动调回顶端，是因为”#”默认的瞄点位置是top，所以会出现这种情况。</h3><h3 id="表达式会被计算但是不会在当前文档处装入任何内容，void-0-计算为0，但在JavaScript上没有任何效果，也就是说-lt-a-href-quot-javascript：void-0-quot-gt-的效果同-lt-a-href-quot-javascript：void-1-quot-gt-的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。"><a href="#表达式会被计算但是不会在当前文档处装入任何内容，void-0-计算为0，但在JavaScript上没有任何效果，也就是说-lt-a-href-quot-javascript：void-0-quot-gt-的效果同-lt-a-href-quot-javascript：void-1-quot-gt-的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。" class="headerlink" title="表达式会被计算但是不会在当前文档处装入任何内容，void(0)计算为0，但在JavaScript上没有任何效果，也就是说 &lt;a href=&quot;javascript：void(0)&quot;&gt;的效果同&lt;a href=&quot;javascript：void(1)&quot;&gt;的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。"></a>表达式会被计算但是不会在当前文档处装入任何内容，void(0)计算为0，但在JavaScript上没有任何效果，也就是说 <code>&lt;a href=&quot;javascript：void(0)&quot;&gt;</code>的效果同<code>&lt;a href=&quot;javascript：void(1)&quot;&gt;</code>的效果是一样的。也就是表达式会被计算，但在javascript中没有任何效果。</h3><h4 id="在这里举个例子"><a href="#在这里举个例子" class="headerlink" title="在这里举个例子"></a>在这里举个例子</h4><pre><code>&lt;a href=&quot;javascript:void(document.form.submit())&quot;&gt;点击提交&lt;/a&gt;
+</code></pre><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="1-a-href-与-a-href-javascript-void-0-的区别"><a href="#1-a-href-与-a-href-javascript-void-0-的区别" class="headerlink" title="1.a href=#与 a href=javascript:void(0) 的区别"></a>1.a href=#与 a href=javascript:void(0) 的区别</h4><pre><code>1）#包含了一个位置信息，默认的锚是#top ，也就是网页的上端
+
+2）javascript:void(0) 只表示一个链接，调用脚本的时候用这个比较合适，又或者给标签添加一个点击事件，比如&lt;input onclick&gt;  ,&lt;div onclick&gt;
+</code></pre><h2 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h2><h3 id="1-可采用的链接办法如下"><a href="#1-可采用的链接办法如下" class="headerlink" title="1.可采用的链接办法如下"></a>1.可采用的链接办法如下</h3><pre><code>1) window.open(&quot;url&quot;)
+
+2)自定义函数
+    &lt;script&gt;
+        function openWin(tag,obj){
+              obj.target=&quot;_blank&quot;;
+              obj.href = &quot;Web/Substation/Substation.aspx?stationno=&quot;+tag;
+              obj.click();
+          }
+    &lt;/script&gt;
+</code></pre><p><em>javascript:void(0);在浏览器上有兼容性问题，个人认为javascript:;比较适用</em></p>
+<h3 id="（三）总结"><a href="#（三）总结" class="headerlink" title="（三）总结"></a>（三）总结</h3><h3 id="1-针对”-”-出现调到顶部的情况"><a href="#1-针对”-”-出现调到顶部的情况" class="headerlink" title="1.针对”#”,出现调到顶部的情况"></a>1.针对”#”,出现调到顶部的情况</h3><pre><code>1：&lt;a href=&quot;####&quot;&gt;&lt;/a&gt;
+2：&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;/a&gt;
+3：&lt;a href=&quot;javascript:void(null)&quot;&gt;&lt;/a&gt;
+4：&lt;a href=&quot;#&quot; onclick=&quot;return false&quot;&gt;&lt;/a&gt;
+5：&lt;span style=&quot;cursor:hand&quot;&gt;&lt;/span&gt;(好像在FF中不能显示)
+</code></pre><h3 id="2-要执行某些处理，但是不整体刷新页面的情况下，可以使用void-0-那什么情况下用void-0-比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void-0-，所以在使用void-0-之前-最好先想一想-这个页面是否需要整体刷新。"><a href="#2-要执行某些处理，但是不整体刷新页面的情况下，可以使用void-0-那什么情况下用void-0-比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void-0-，所以在使用void-0-之前-最好先想一想-这个页面是否需要整体刷新。" class="headerlink" title="2.要执行某些处理，但是不整体刷新页面的情况下，可以使用void(0),那什么情况下用void(0)比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void(0)，所以在使用void(0)之前,最好先想一想,这个页面是否需要整体刷新。"></a>2.要执行某些处理，但是不整体刷新页面的情况下，可以使用void(0),那什么情况下用void(0)比较多呢，无刷新，当然是Ajax了，看一下Ajax的web页面的话，一般都会看到有很多的void(0)，所以在使用void(0)之前,最好先想一想,这个页面是否需要整体刷新。</h3>
 	
 	
 	
@@ -350,7 +388,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/09/02/php1/" id="post_nav-newer" class="prev-content">
+        <a href="/2016/10/10/超省代码的正则表达式/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -364,7 +402,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/08/13/hexo博客编辑软件mou的使用规则/" id="post_nav-older" class="next-content">
+        <a href="/2016/09/20/php4/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
