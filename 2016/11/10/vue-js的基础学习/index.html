@@ -331,8 +331,18 @@
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
 		<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
-<li>v-bind<ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;tenplate&gt;</div><div class="line">	&lt;ul&gt;</div><div class="line">		&lt;li v-bind:class=&quot;[liclass]&quot;&gt;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;	</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	export default&#123;</div><div class="line">		data()&#123;</div><div class="line">			//先赋值</div><div class="line">			liclass:&quot;this is liclass&quot;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style&gt;&lt;/style&gt;</div><div class="line"></div><div class="line">***</div><div class="line">//在控制台显示出的效果是</div><div class="line">&lt;li class=&quot;this is licalss&quot;&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
+<li><p><em>v-bind</em> 主要用于属性绑定</p>
+<ul>
+<li>缩写  <code>:</code></li>
+<li><p>类型： <code>any (with argument) | Object (without argument)</code></p>
+</li>
+<li><p>参数： <code>attrOrProp (optional)</code></p>
+</li>
+<li><p>修饰符：<code>.prop - 被用于绑定 DOM 属性。</code></p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;tenplate&gt;</div><div class="line">	&lt;ul&gt;</div><div class="line">		&lt;li v-bind:class=&quot;[liClass]&quot;&gt;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;	</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	export default&#123;</div><div class="line">		data()&#123;</div><div class="line">			//先赋值</div><div class="line">			liclass:&quot;this is liClass&quot;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style&gt;&lt;/style&gt;</div><div class="line">***</div><div class="line"></div><div class="line">//在控制台显示出的效果是</div><div class="line"></div><div class="line">&lt;li Class=&quot;this is liCalss&quot;&gt;&lt;/li&gt;</div><div class="line">//简单说这里的[liCalss]就是被解析为data里的数值</div></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//如果想要控制class,可以在里面添加一个对象即给v-bind:class 一个对象，以动态地切换class</div><div class="line">&lt;template&gt;</div><div class="line">	&lt;ul&gt;</div><div class="line">		&lt;li v-for=&quot;item in items&quot; v-bind:class=&quot;&#123;finished:item.isFinished&#125;&quot;&gt;&#123;&#123;item.list&#125;&#125;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;	</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	export default&#123;</div><div class="line">		data()&#123;</div><div class="line">			return&#123;</div><div class="line">				items:[&#123;</div><div class="line">					list:&quot;hello,nice to meet you&quot;</div><div class="line">					isFinished:flase</div><div class="line">				&#125;,&#123;</div><div class="line">					list:&quot;she is so beautiful&quot;</div><div class="line">					isFinished:true</div><div class="line">				&#125;]				</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style&gt;</div><div class="line">	.finished&#123;</div><div class="line">		text-decoration:underline;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -457,7 +467,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a>
+            <a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a>
         </ul>
     </li>
 
@@ -472,7 +482,7 @@
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">17</span>
+             <span class="sidebar-badge">18</span>
         </a>
     </li>
 </ul>
